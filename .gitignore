@@ -1,0 +1,27 @@
+# Node modules
+node_modules/
+server-app/node_modules/
+client-app/node_modules/
+
+# Environment files
+.env
+server-app/.env
+client-app/.env
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Build files
+client-app/build/
+server-app/dist/
+
+# System files
+.DS_Store
+Thumbs.db
+
+# Hardhat artifacts
+blockchain/artifacts/
+blockchain/cache/
