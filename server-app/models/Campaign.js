@@ -6,10 +6,13 @@ const campaignSchema = new mongoose.Schema(
     description: String,
     goalETH: { type: Number, required: true },
     ngoName: String,
+    ngoAddress: String,
     totalDonations: { type: Number, default: 0 },
     blockchainId: { type: Number, default: null },
   },
   { timestamps: true }
 );
 
-export default mongoose.model("Campaign", campaignSchema);
+// ✅ Export the model properly
+const Campaign = mongoose.model("Campaign", campaignSchema);
+export default Campaign;

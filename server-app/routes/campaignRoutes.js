@@ -80,5 +80,14 @@ router.put("/:id/donate", async (req, res) => {
     res.status(500).json({ message: "Failed to update campaign donation" });
   }
 });
+// In your backend routes (e.g., routes/campaigns.js)
+router.delete('/campaigns/:id', async (req, res) => {
+  try {
+    await Campaign.findByIdAndDelete(req.params.id);
+    res.json({ message: 'Campaign deleted successfully' });
+  } catch (error) {
+    res.status(500).json({ message: error.message });
+  }
+});
 
 export default router; 
